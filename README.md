@@ -1,2 +1,1 @@
 # ghcjsdiagram
-WIP
