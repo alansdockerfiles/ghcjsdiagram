@@ -2,7 +2,7 @@ FROM debian:unstable
 RUN echo deb http://httpredir.debian.org/debian experimental main >> /etc/apt/sources.list                                                                                                                  
 RUN apt-get update                                                                                                                                                                                          
 RUN apt-get install -y --no-install-recommends -t experimental ghc cabal-install alex happy
-RUN apt-get install -y --no-install-recommends zlib1g-dev  build-essential git libtinfo-dev libgmp-dev autoconf curl nodejs vim
+RUN apt-get install -y --no-install-recommends zlib1g-dev  build-essential git ca-certificates libtinfo-dev libgmp-dev autoconf curl nodejs vim
 RUN cabal update && cabal install cabal-install Cabal
 RUN curl -sL https://deb.nodesource.com/setup | bash -
 RUN git clone https://github.com/ghcjs/ghcjs.git
